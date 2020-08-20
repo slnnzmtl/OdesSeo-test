@@ -1,0 +1,15 @@
+@import 'item/item.scss';
+@import 'users-list_theme_light.scss';
+@import '__title/users-list__title.scss';
+
+.users-list {
+  height: 100%;
+
+  .item {
+    margin: 15px;
+  }
+
+  .users-list__title {
+    margin-top: 10px;
+  }
+}

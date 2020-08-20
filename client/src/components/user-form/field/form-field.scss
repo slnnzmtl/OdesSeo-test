@@ -1,0 +1,16 @@
+@import "__input/form-field__input.scss";
+@import "__error-message/form-field__error-message.scss";
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .form-field__label {
+    margin-bottom: 10px;
+  }
+
+  .form-field__error-message {
+    margin-top: 10px;
+  }
+}

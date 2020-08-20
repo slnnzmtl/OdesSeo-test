@@ -1,0 +1,11 @@
+@import "@/components/user-form/user-form.scss";
+@import "@/components/users-list/users-list.scss";
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  display: flex;
+  .user-form {
+    margin-right: 20px;
+  }
+  justify-content: center;
+}

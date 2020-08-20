@@ -1,0 +1,43 @@
+@import "__actions/item__actions.scss";
+@import "__button/item__button.scss";
+@import "__button/item__button-delete.scss";
+@import "__button/item__button-edit.scss";
+@import "item_theme_light.scss";
+
+.item {
+  width: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+
+  .item__field {
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+  .item__name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .item__contacts {
+    display: flex;
+    flex-direction: row;
+
+    .item__email {
+      margin-right: 3px;
+    }
+  }
+  .item__info {
+    width: 100%;
+  }
+  .item__actions {
+    height: 100%;
+    display: flex;
+
+    .item__button {
+      margin-left: 10px;
+    }
+  }
+}
