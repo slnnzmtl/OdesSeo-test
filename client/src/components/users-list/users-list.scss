@@ -1,6 +1,7 @@
 @import 'item/item.scss';
 @import 'users-list_theme_light.scss';
 @import '__title/users-list__title.scss';
+@import 'users-list__empty.scss';
 
 .users-list {
   height: 100%;
@@ -10,6 +11,10 @@
   }
 
   .users-list__title {
+    margin-top: 10px;
+  }
+
+  .users-list__empty {
     margin-top: 10px;
   }
 }
