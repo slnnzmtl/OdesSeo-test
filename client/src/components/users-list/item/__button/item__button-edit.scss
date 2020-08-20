@@ -1,4 +1,8 @@
 .item__button-edit {
-  background-color: #879BFF;
+  background-color: #4da0ff;
   color: white;
+
+  &:hover {
+    background-color: #70b3ff;
+  }
 }

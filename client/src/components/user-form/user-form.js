@@ -2,7 +2,6 @@ export default {
   name: 'user-form',
   data() {
     return {
-      User: {},
       name: false,
       position: false,
       email: false,
@@ -10,7 +9,7 @@ export default {
     }
   },
   methods: {
-    Save(user) {
+    save(user) {
       if (!this.validEmail(user.email)) {
         this.email = true
       } else {
@@ -31,18 +30,12 @@ export default {
       } else {
         this.phone = false
       }
-      if (
-        this.validEmail(user.email) &&
-        this.validName(user.name) &&
-        this.validPosition(user.position) &&
-        this.validPhone(user.phone)
-      ) {
+      if (!this.email && !this.name && !this.position && !this.phone) {
         if (this.$store.getters.editableUser == null){
           this.$store.dispatch('addUser')
         } else {
           this.$store.dispatch('saveList')
         }
-        console.log(this.$store.getters.editUser)
         this.$store.dispatch('resetCurrentUser')
       }
     },
@@ -51,15 +44,19 @@ export default {
       return reg.test(email)
     },
     validName(name) {
-      var reg = /[а-яa-zА-ЯA-Z-]{0,}\s[а-яa-zА-ЯA-Z-]{1,}/
+      var reg = /^[а-яa-zА-ЯA-Z-]{0,}\s[а-яa-zА-ЯA-Z-]{1,}$/
       return reg.test(name)
     },
     validPosition(position) {
-    var reg = /[a-zA-ZА-Яа-я0-9]{5,}/
-      return reg.test(position)
+        if (position) {
+          var reg = /^.{5,}$/
+        return reg.test(position)
+      } else {
+        return false
+      }
     },
     validPhone(phone) {
-      var reg = /\+?\d{10,13}/
+      var reg = /^\+?\d{10,13}$/
         return reg.test(phone)
     }
   },

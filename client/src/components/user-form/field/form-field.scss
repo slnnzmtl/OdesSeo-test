@@ -7,10 +7,9 @@
   align-items: flex-start;
 
   .form-field__label {
-    margin-bottom: 10px;
-  }
-
-  .form-field__error-message {
-    margin-top: 10px;
+    // margin-top: 10px;
+    .form-field__input {
+      margin-top: 5px;
+    }
   }
 }

@@ -9,8 +9,8 @@
       </div>
     </div>
     <div class="item__actions">
-      <button class="item__button item__button-edit" @click="edit()">Edit</button>
-      <button class="item__button item__button-delete" @click="remove()">Delete</button>
+      <button class="item__button item__button-edit" @click="edit()"></button>
+      <button class="item__button item__button-delete" @click="remove()"></button>
     </div>
   </div>
 </template>
